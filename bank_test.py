@@ -26,8 +26,7 @@ class BankTest(unittest.TestCase):
         bank = Bank()
         account_1 = Account(001, 50)
         bank.add_account(account_1)
-        bank.withdraw("001", 20)
-        self.assertEqual(bank.get_account_balance("001"), 20)
+        self.assertEqual(bank.withdraw(001,20), 30)
 
 if __name__ == '__main__':
     unittest.main()

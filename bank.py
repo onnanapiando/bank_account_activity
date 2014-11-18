@@ -11,8 +11,8 @@ class Bank(object):
       return self.accounts.get(account_number)
 
     def withdraw(self, account_number, amt_withdraw):
-    	account = Account("001",50)
-        balance =  account.balance
-        new_amount = balance - account.balance
-        return new_amount
-
+      if self.accounts.get(account_number) - amt_withdraw:
+          new_balance = self.accounts.get(account_number) - amt_withdraw
+          return new_balance
+      else:
+          return 'Transaction Error'
