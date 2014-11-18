@@ -6,8 +6,14 @@ class TestAccount(unittest.TestCase):
       account = Account("001", 50)
       self.assertEqual(account.account_number, "001")
       self.assertEqual(account.balance, 50)
-
+    
+    def test_withdraw(self):
+      account = Account("001", 50)
+      # acct_withdraw = account.withdraw(001,20)
+      # self.assertEqual(account.account_number, "001")     
+      self.assertEqual(account.withdraw, (001,20))
 
 if __name__ == '__main__':
     unittest.main()
+
 

@@ -1,5 +1,5 @@
-import unittest
-from account import Account
+import unittest 
+from account import Account 
 from bank import Bank
 
 class BankTest(unittest.TestCase):
@@ -21,6 +21,7 @@ class BankTest(unittest.TestCase):
       account_1 = Account(001, 50)
       bank.add_account(account_1)
       self.assertEqual(bank.get_account_balance(001), 50)
+    
 
 if __name__ == '__main__':
     unittest.main()
