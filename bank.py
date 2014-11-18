@@ -8,3 +8,5 @@ class Bank(object):
     def get_account_balance(self, account_number):
       return self.accounts.get(account_number)
 
+    def withdraw(self, account_number, amt_withdraw):
+      pass
