@@ -1,3 +1,5 @@
+from account import Account
+
 class Bank(object):
     def __init__(self):
       self.accounts = {}
@@ -9,4 +11,8 @@ class Bank(object):
       return self.accounts.get(account_number)
 
     def withdraw(self, account_number, amt_withdraw):
-      pass
+    	account = Account("001",50)
+        balance =  account.balance
+        new_amount = balance - account.balance
+        return new_amount
+
