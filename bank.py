@@ -12,7 +12,12 @@ class Bank(object):
 
     def withdraw(self, account_number, amt_withdraw):
       if self.accounts.get(account_number) - amt_withdraw:
-          new_balance = self.accounts.get(account_number) - amt_withdraw
-          return new_balance
+          if type(amt_withdraw) == int:
+            new_balance = self.accounts.get(account_number) - amt_withdraw
+            return new_balance
+          elif type(account_number) != int:
+             return 'Incorrect account number'
+          else:
+             raise TypeError("Invalid type: {}".format(type(amt_withdraw)))
       else:
           return 'Transaction Error'
